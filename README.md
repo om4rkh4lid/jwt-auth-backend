@@ -7,6 +7,7 @@ The project's frontend: https://github.com/om4rkh4lid/jwt-auth-frontend
 ## Description
 
 In this project I practiced working with TypeScript in NodeJS (Express) as well as using a Relational ORM (TypeORM) for TypeScript.
+Additionally, I've used Joi to validate user inputs against a set of predetermined criteria.
 I've also implemented a more secure approach using refresh tokens and access tokens to prevent XSS and CSRF attacks.
 
 ## Getting Started
