@@ -26,7 +26,7 @@ I've also implemented a more secure approach using refresh tokens and access tok
 ### Installing
 
 * Download the project files or clone this repository
-* create a .env file at the root of the project with the following variables:
+* Create a .env file at the root of the project with the following variables:
     - NODE_ENV ("production" or "development")
     - DB_HOST
     - DB_PORT
@@ -48,7 +48,9 @@ I've also implemented a more secure approach using refresh tokens and access tok
 * run the following command in the project's root directory
 * to run the project in development mode run the following command in your terminal
 ```
-npm run start:dev
+npm run dev
 ```
 * to run the project in production mode run the following command in your terminal
+```
+npm start
 ```
