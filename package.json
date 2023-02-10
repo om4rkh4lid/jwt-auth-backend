@@ -1,5 +1,5 @@
 {
-   "name": "express-authentication",
+   "name": "jwt-auth-backend",
    "version": "0.0.1",
    "description": "A Registration, Authentication, and Authorization system using Node.js, Express, TypeScript, and TypeORM",
    "type": "commonjs",
