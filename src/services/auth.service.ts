@@ -19,7 +19,7 @@ export class AuthService {
       const refreshToken = generateRefreshToken({ email: user.email });
       user.refreshToken = refreshToken
       await this.userRepository.save(user);
-      return { accessToken, user: { email: user.email, id: user.id }, refreshToken };
+      return { accessToken, user: { email: user.email, id: user.id, roles: user.roles }, refreshToken };
     } else {
       throw new Error("Invalid credentials! Try again.");
     }
