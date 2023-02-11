@@ -16,7 +16,6 @@ export const protect = async (req: Request, res: Response, next: NextFunction) =
 
     if (user) {
       delete user.password;
-      // TODO: Fix this...
       req.user = user;
       next();
     } else {

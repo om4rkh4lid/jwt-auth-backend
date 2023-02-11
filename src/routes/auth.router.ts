@@ -2,7 +2,7 @@ import { Router } from "express";
 import { AuthController } from "../controllers";
 import { Database } from "../data-source";
 import { User } from "../entities";
-import { protect } from "../middleware";
+import { authorize, protect } from "../middleware";
 import { AuthService } from "../services";
 import { safeAsync } from "../utils/helpers";
 
