@@ -25,7 +25,7 @@ export class AuthController {
      */
     res.cookie('refresh_token', response.refreshToken, { httpOnly: true, sameSite: 'none', secure: true, maxAge: 30 * 60 * 60 * 24 * 1000, domain:'localhost' })
     
-    res.status(200).json({ accessToken: response.accessToken, user: response.user });
+    res.status(200).json({ accessToken: response.accessToken, ...response.user });
 
   }
 
