@@ -19,7 +19,7 @@ export class AuthService {
       const refreshToken = generateRefreshToken({ email: user.email });
       user.refreshToken = refreshToken
       await this.userRepository.save(user);
-      return { accessToken, user: { email: user.email, id: user.id }, refreshToken };
+      return { accessToken, user: { email: user.email, id: user.id, roles: user.roles }, refreshToken };
     } else {
       throw new Error("Invalid credentials! Try again.");
     }
@@ -45,7 +45,7 @@ export class AuthService {
     const decodedToken = decode(refreshToken) as { email: string }
     const user = await this.userRepository.findOne({ where: { email: decodedToken.email } });
     if ( user && decodedToken.email && user.email === decodedToken.email ) {
-      const accessToken = generateAccessToken({ id: user.id });
+      const accessToken = generateAccessToken({ id: user.id, roles: user.roles });
       const newRefreshToken = generateRefreshToken({ email: user.email });
       user.refreshToken = newRefreshToken
       await this.userRepository.save(user);
